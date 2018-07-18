@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\bvorwald\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_MerchantConsole.1164128282.00" t="ExcludeRecursive" />
+    <e p="C:\Users\bvorwald\Documents\Projects\InGameMerchant" t="IncludeFlat">
+      <e p="MerchantConsole" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Item.cs" t="Include" />
+        <e p="ItemType.cs" t="Include" />
+        <e p="MerchantConsole.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Player.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Shop.cs" t="Include" />
+        <e p="ShopAction.cs" t="Include" />
+      </e>
+      <e p="MerchantConsole.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
