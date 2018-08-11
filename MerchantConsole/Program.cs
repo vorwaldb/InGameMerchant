@@ -48,34 +48,34 @@ namespace MerchantConsole
         private static void PerformBuyingOption(Shop shop, Player player)
         {
             var menuHandler = new MenuHandler();
-            var itemToBuy = menuHandler.GetItemToBuy(shop.GetAllItems());
+            var buyingResult = menuHandler.GetItemToBuy(shop.GetAllItems());
             
-            if (itemToBuy.IsExitingMenu)
+            if (buyingResult.IsExitingMenu)
                 return;
             
-            if(itemToBuy.ChosenItem.Price > player.Gold)
+            if(buyingResult.ChosenItem.Price > player.Gold)
             {
                 Console.WriteLine("You cannot buy this! You do not have enough gold! Try something else.");
                 return;
             }
 
-            player.Inventory.Add(itemToBuy.ChosenItem);
-            player.Gold -= itemToBuy.ChosenItem.Price;
-            Console.WriteLine($"Congratulations! You have bought a brand new {itemToBuy.ChosenItem.Name}!");
+            player.Inventory.Add(buyingResult.ChosenItem);
+            player.Gold -= buyingResult.ChosenItem.Price;
+            Console.WriteLine($"Congratulations! You have bought a brand new {buyingResult.ChosenItem.Name}!");
         }
 
         private static void PerformSellback(Player player)
         {
             var menuHandler = new MenuHandler();
-            var sellBackItem = menuHandler.GetItemToSell(player.Inventory);
+            var sellBackResult = menuHandler.GetItemToSell(player.Inventory);
 
-            if (sellBackItem.IsExitingMenu)
+            if (sellBackResult.IsExitingMenu)
                 return;
             
-            player.Gold += sellBackItem.ChosenItem.GetTradeInValue();
+            player.Gold += sellBackResult.ChosenItem.GetTradeInValue();
 
-            player.Inventory.Remove(sellBackItem.ChosenItem);
-            Console.WriteLine($"You have sold your {sellBackItem.ChosenItem.Name} for {sellBackItem.ChosenItem.GetTradeInValue()}.");
+            player.Inventory.Remove(sellBackResult.ChosenItem);
+            Console.WriteLine($"You have sold your {sellBackResult.ChosenItem.Name} for {sellBackResult.ChosenItem.GetTradeInValue()}.");
         }
     }
 }

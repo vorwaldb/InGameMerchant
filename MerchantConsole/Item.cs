@@ -9,6 +9,7 @@
         /// Name of the item
         /// </summary>
         public string Name { get; }
+        
         /// <summary>
         /// The price for which one pays to buy the item
         /// </summary>
