@@ -1,6 +1,6 @@
 ﻿namespace MerchantConsole
 {
-    class Item
+    public class Item
     {
         public string Name { get; private set; }
         public string Description { get; set; }
