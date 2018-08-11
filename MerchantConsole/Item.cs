@@ -11,11 +11,6 @@
         public string Name { get; }
         
         /// <summary>
-        /// A short description of the item
-        /// </summary>
-        public string Description { get; set; }
-        
-        /// <summary>
         /// The type of the item
         /// </summary>
         public ItemType Type { get; }

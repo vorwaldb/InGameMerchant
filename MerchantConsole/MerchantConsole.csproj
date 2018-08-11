@@ -51,7 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MenuResult.cs" />
     <Compile Include="Shop.cs" />
-    <Compile Include="ShopAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
