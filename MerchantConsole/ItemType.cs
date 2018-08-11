@@ -7,7 +7,6 @@
     {
         Potion,
         Weapon,
-        Armor,
-        Tool
+        Armor
     }
 }

@@ -4,9 +4,16 @@ using System.Text;
 
 namespace MerchantConsole
 {
+    /// <summary>
+    /// Class for handling interactions with the menu
+    /// </summary>
     public class MenuHandler
     {
-        public MerchantAction GetMenuAction(int currentGold)
+        /// <summary>
+        /// Gets the merchant action the user chooses to engage in
+        /// </summary>
+        /// <param name="currentGold"></param>
+        public MerchantAction GetMerchantAction(int currentGold)
         {
             const int buyAction = (int)MerchantAction.Buy;
             const int sellAction = (int)MerchantAction.Sell;
@@ -40,11 +47,20 @@ namespace MerchantConsole
             return (MerchantAction) menuActionString;
         }
 
+        /// <summary>
+        /// For the passed in item list, returns the MenuResult containing the item the user wishes to sell
+        /// </summary>
+        /// <param name="itemsToSell"></param>
         public MenuResult GetItemToSell(List<Item> itemsToSell)
         {
             return GetMenuReturnItemForAction(MerchantAction.Sell, itemsToSell);
         }
 
+        /// <summary>
+        /// For the passed in item list, returns the MenuResult containing the item the user wishes to buy
+        /// </summary>
+        /// <param name="itemsToBuy"></param>
+        /// <returns></returns>
         public MenuResult GetItemToBuy(List<Item> itemsToBuy)
         {
             return GetMenuReturnItemForAction(MerchantAction.Buy, itemsToBuy);

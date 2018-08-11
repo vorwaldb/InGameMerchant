@@ -16,13 +16,13 @@ namespace MerchantConsole
         {
             var shop = new Shop();
             var menu = new MenuHandler();
-            var menuAction = MerchantAction.Buy;
+            var merchantAction = MerchantAction.Buy;
 
-            while (menuAction != MerchantAction.Exit)
+            while (merchantAction != MerchantAction.Exit)
             {
-                menuAction = menu.GetMenuAction(player.Gold);
+                merchantAction = menu.GetMerchantAction(player.Gold);
 
-                switch (menuAction)
+                switch (merchantAction)
                 {
                     case MerchantAction.Buy:
                         PerformBuyingOption(shop, player);
