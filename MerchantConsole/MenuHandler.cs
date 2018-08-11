@@ -6,11 +6,11 @@ namespace MerchantConsole
 {
     public class MenuHandler
     {
-        public MenuAction GetMenuAction(int currentGold)
+        public MerchantAction GetMenuAction(int currentGold)
         {
-            const int buyAction = (int)MenuAction.Buy;
-            const int sellAction = (int)MenuAction.Sell;
-            const int exitAction = (int)MenuAction.Exit;
+            const int buyAction = (int)MerchantAction.Buy;
+            const int sellAction = (int)MerchantAction.Sell;
+            const int exitAction = (int)MerchantAction.Exit;
             
             var selectionText = $"{Environment.NewLine}{buyAction} - Buy{Environment.NewLine}{sellAction} - Sell{Environment.NewLine}{exitAction} - Exit";
             
@@ -37,25 +37,25 @@ namespace MerchantConsole
 
             // ReSharper disable once AssignNullToNotNullAttribute
             var menuActionString = int.Parse(enteredText);
-            return (MenuAction) menuActionString;
+            return (MerchantAction) menuActionString;
         }
 
         public MenuResult GetItemToSell(List<Item> itemsToSell)
         {
-            return GetMenuReturnItemForAction(MenuAction.Sell, itemsToSell);
+            return GetMenuReturnItemForAction(MerchantAction.Sell, itemsToSell);
         }
 
         public MenuResult GetItemToBuy(List<Item> itemsToBuy)
         {
-            return GetMenuReturnItemForAction(MenuAction.Buy, itemsToBuy);
+            return GetMenuReturnItemForAction(MerchantAction.Buy, itemsToBuy);
         }
 
-        private MenuResult GetMenuReturnItemForAction(MenuAction actionToPerform, List<Item> menuItems)
+        private MenuResult GetMenuReturnItemForAction(MerchantAction actionToPerform, List<Item> menuItems)
         {
             var maxItemNumber = menuItems.Count;
             var backMenu = maxItemNumber + 1;
 
-            var textOption = actionToPerform == MenuAction.Buy ? "buy" : "sell";
+            var textOption = actionToPerform == MerchantAction.Buy ? "buy" : "sell";
             var displayText = $"Please choose an item to {textOption}:";
             
             var itemDictionary = new Dictionary<int, Item>();
@@ -66,7 +66,7 @@ namespace MerchantConsole
                 var itemNumber = num + 1;
 
                 itemDictionary.Add(itemNumber, item);
-                var itemAmount = actionToPerform == MenuAction.Buy ? item.Price : item.GetTradeInValue();
+                var itemAmount = actionToPerform == MerchantAction.Buy ? item.Price : item.GetTradeInValue();
                 displayText += $"{Environment.NewLine}{itemNumber} - {item.Name} - Price: {itemAmount}";
             }
 

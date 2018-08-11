@@ -16,18 +16,18 @@ namespace MerchantConsole
         {
             var shop = new Shop();
             var menu = new MenuHandler();
-            var menuAction = MenuAction.Buy;
+            var menuAction = MerchantAction.Buy;
 
-            while (menuAction != MenuAction.Exit)
+            while (menuAction != MerchantAction.Exit)
             {
                 menuAction = menu.GetMenuAction(player.Gold);
 
                 switch (menuAction)
                 {
-                    case MenuAction.Buy:
+                    case MerchantAction.Buy:
                         PerformBuyingOption(shop, player);
                         break;
-                    case MenuAction.Sell:
+                    case MerchantAction.Sell:
                         if (!player.Inventory.Any())
                         {
                             Console.WriteLine("I am sorry, but it looks like you have nothing to sell.");
@@ -35,7 +35,7 @@ namespace MerchantConsole
                         }
                         PerformSellback(player);
                         break;
-                    case MenuAction.Exit:
+                    case MerchantAction.Exit:
                         Console.WriteLine("Thank you for your business! Let's shop again sometime! Press any key to exit.");
                         Console.ReadKey();
                         break;
