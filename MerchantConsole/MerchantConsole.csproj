@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Item.cs" />
-    <Compile Include="ItemType.cs" />
     <Compile Include="MerchantAction.cs" />
     <Compile Include="MenuHandler.cs" />
     <Compile Include="Player.cs" />

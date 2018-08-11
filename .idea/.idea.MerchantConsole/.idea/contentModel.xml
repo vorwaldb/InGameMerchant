@@ -7,7 +7,6 @@
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Item.cs" t="Include" />
-        <e p="ItemType.cs" t="Include" />
         <e p="MenuHandler.cs" t="Include" />
         <e p="MenuResult.cs" t="Include" />
         <e p="MerchantAction.cs" t="Include" />

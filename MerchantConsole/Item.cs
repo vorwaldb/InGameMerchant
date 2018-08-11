@@ -9,12 +9,6 @@
         /// Name of the item
         /// </summary>
         public string Name { get; }
-        
-        /// <summary>
-        /// The type of the item
-        /// </summary>
-        public ItemType Type { get; }
-        
         /// <summary>
         /// The price for which one pays to buy the item
         /// </summary>
@@ -24,12 +18,10 @@
         /// Creates a new instance of the Item class
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="type"></param>
         /// <param name="price"></param>
-        public Item(string name, ItemType type, int price)
+        public Item(string name, int price)
         {
             Name = name;
-            Type = type;
             Price = price;
         }
 

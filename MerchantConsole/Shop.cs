@@ -39,7 +39,7 @@ namespace MerchantConsole
         {
             _potionInventory = new List<Item>
             {
-                new Item("Red Potion", ItemType.Potion, 200)
+                new Item("Red Potion", 200)
             };
         }
 
@@ -47,9 +47,9 @@ namespace MerchantConsole
         {
             _armorInventory = new List<Item>()
             {
-                new Item("Shield of Red Dwarfs", ItemType.Armor, 1000),
-                new Item("Wooden Shield", ItemType.Armor, 100),
-                new Item("Chainmail", ItemType.Armor, 400)
+                new Item("Shield of Red Dwarfs", 1000),
+                new Item("Wooden Shield", 100),
+                new Item("Chainmail", 400)
             };
         }
 
@@ -57,10 +57,10 @@ namespace MerchantConsole
         {
             _weaponInventory = new List<Item>()
             {
-                new Item("Fire Sword", ItemType.Weapon, 300),
-                new Item("Dead Man Axe", ItemType.Weapon, 800),
-                new Item("Golden Bow", ItemType.Weapon, 550),
-                new Item("Staff of the Violet Wizard", ItemType.Weapon, 600)
+                new Item("Fire Sword", 300),
+                new Item("Dead Man Axe", 800),
+                new Item("Golden Bow", 550),
+                new Item("Staff of the Violet Wizard", 600)
             };
         }
     }
